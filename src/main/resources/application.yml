@@ -1,0 +1,21 @@
+server:
+  port: 8091
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/auth_db
+    username: auth_user
+    password: secret
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+
+jwt:
+  secret: my_super_secret_key_that_is_long_enough_123456
+  expiration-ms: 300000
+
